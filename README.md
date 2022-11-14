@@ -9,19 +9,34 @@ So, Let`s working together!
 **With tbe best wishes, Julia! :-)**
 
 # Task 2: Selectors"
-For the button "Main page" we can use such Xpath:
+"Scouts Panel"
 
-* "/html[1]/body[1]/div[1]/div[2]"
-* "//*[@id="__next"]/div[1]/header/div/h6"
-* "//*[text()="Main page"]"
+* //*[@id="__next"]/form/div/div[1]/h5
+* //form/div/div[1]/h5
+* //*[text()='Scouts Panel']
 
-For the button "Scout panel" we can use such Xpath:
-* "//h6[contains(@class,'MuiTypography-h6')]"
-* "//h6[text()="Scout Panel"]"
-* "//*[@id="__next"]/div[1]/header/div/h6"
+"Login"
+* //*[@id="login-label"]
+* //*[text()='Login']
+* //*[@type='text']
 
- For the  button of "Changing language"
-* //ul[2]/div[1]/div[2]/span
-* //span[contains(text(),'Polski')]
-* //header/div/h6
+ "Password"
+* //*[@id="password-label"]
+* //*[@type='password']
+* //*[text()='Password']
+
+"Remind password"
+* //form/div/div[1]/a
+* //*[text()='Remind password']
+* //*[contains(@class,"MuiLink-underlineHover jss15")]
+
+"Change language"
+* //*[contains(@class,"MuiSelect-select")]
+* //*[@id="__next"]/form/div/div[2]/div/div
+* //*[text()='English']
+
+"Button Sing in"
+* //button/span[1]
+* //*[text()='Sign in']
+* //*[contains(@class,"MuiTouchRipple-root")]
 
