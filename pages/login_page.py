@@ -1,11 +1,14 @@
 from pages.base_page import BasePage
 #
 #
-# class LoginPage(BasePage):
-# login_field_xpath = "//*[@id='login']"
-#  password_field_xpath = "//*[@id='password']"
-#  sign_in_button_xpath = "//*[@id='sing in']"
-#
-#     def type_in_email(self, email):
-#         self.field_send_keys(self.login_field_xpath, email)
-#
+class LoginPage(BasePage):
+login_field_xpath = "//*[@id='login']"
+password_field_xpath = "//*[@id='password']"
+sign_in_button_xpath = "//*[@id='sing in']"
+
+def field_send_keys(self, selector, value, locator_type=By.XPATH):
+    return self.driver.find_element(locator_type, selector).send_keys(value)
+def type_in_password(self, password):
+    self.field_send_keys(self.password_field_xpath, password)
+ def type_in_email(self, email):
+    self.field_send_keys(self.login_field_xpath, email)
