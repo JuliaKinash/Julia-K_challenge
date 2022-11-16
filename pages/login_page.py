@@ -8,7 +8,7 @@ class LoginPage(BasePage):
     login_url = 'https://scouts-test.futbolkolektyw.pl/en'
     expected_title = "Scouts panel - sign in"
     title_of_box_xpath = "//*[@id='__next']/form/div/div[1]/h5"
-    header_of_box = 'Scout Panel'
+    header_of_box = 'Scouts Panel'
 
     def type_in_email(self, email):
         self.field_send_keys(self.login_field_xpath, email)
