@@ -7,7 +7,7 @@ from pages.base_page import BasePage
 
 
 class AddPlayerForm(BasePage):
-    add_player_button_xpath = "//main/div[3]/div[2]/div/div/a/button/span[1]"
+    add_player_button_xpath = "//*[@id="__next"]/div[1]/main/div[3]/div[2]/div/div/a/button/span[1]"
     name_field_xpath = "//input[@name='name']"
     surname_field_xpath = "//input[@name=surname']"
     age_field_xpath = "//input[@name='age']"
@@ -24,8 +24,8 @@ class AddPlayerForm(BasePage):
     def type_in_name(self, name):
         self.field_send_keys(self.name_field_xpath, name)
 
-    def type_in_surname(self, name):
-        self.field_send_keys(self.surname_field_xpath, name)
+    def type_in_surname(self, surname):
+        self.field_send_keys(self.surname_field_xpath, surname)
 
     def type_in_age(self, age):
         self.field_send_keys(self.age_field_xpath, age)
