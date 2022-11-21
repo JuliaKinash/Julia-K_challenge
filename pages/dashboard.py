@@ -15,11 +15,10 @@ class Dashboard(BasePage):
     dashboard_url ='https://scouts-test.futbolkolektyw.pl/'
     add_player_button_xpath = "//main/div[3]/div[2]/div/div/a/button/span[1]"
     futbal_kolektyw_logo_xpath ="//*[@title='Logo Scouts Panel']"
-    wait = WebDriverWait(driver, 10)
+
     def title_of_page(self):
         self.wait_for_element_to_be_clicable(self.futbal_kolektyw_logo_xpath)
-        assert self.get_page_title(self.dashboard_url) == self.expected_title
-
-        def click_on_the_add_player_button(self):
-            self.click_on_the_element(self.add_player_button_xpath)
+        assert self.expected_title(self.dashboard_url) == self.expected_title
+    def click_on_the_add_player_button(self):
+        self.click_on_the_element(self.add_player_button_xpath)
 
