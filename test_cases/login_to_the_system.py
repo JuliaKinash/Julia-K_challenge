@@ -11,7 +11,6 @@ from utils.settings import DRIVER_PATH, IMPLICITLY_WAIT
 def dashboard_page_title_of_page():
     pass
 
-
 class TestLoginPage(unittest.TestCase):
 
     @classmethod
@@ -31,7 +30,6 @@ class TestLoginPage(unittest.TestCase):
         dashboard_page = Dashboard(self.driver)
         dashboard_page_title_of_page()
         time.sleep(5)
-
     @classmethod
     def tearDown(self):
         self.driver.quit()
